@@ -12,6 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include(GoogleTest)
 find_package(GTest REQUIRED)
 
-add_executable(TestTensor "TestTensor.cpp")
+add_executable(Test "TestStaticMultiDimensionalArray.cpp")
+target_link_libraries(Test gtest pthread)
 
-gtest_discover_tests(TestTensor)
+gtest_discover_tests(Test)
